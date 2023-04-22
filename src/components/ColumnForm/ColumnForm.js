@@ -14,12 +14,14 @@ const ColumnForm = props => {
     }
 
 	return (
-        <form onSubmit={handleSubmit}>
-        Title: <input type="text" value={title} 
+        <form className={styles.columnForm} onSubmit={handleSubmit}>
+        <span className={styles.span}>Title:</span>
+            <input className={styles.input} type="text" value={title} 
                 onChange={e => setTitle(e.target.title)} />
-        Icon: <input type="text" value={icon} 
+        <span className={styles.span}>Icon:</span>
+            <input className={styles.input} type="text" value={icon} 
 	            onChange={e => setIcon(e.target.value)} />
-            <Button>Add column</Button>
+            <span className={styles.button}><Button>Add column</Button></span>
         </form>
 	);
 };
