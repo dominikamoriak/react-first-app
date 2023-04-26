@@ -12,7 +12,7 @@ const CardForm = ({ columnId }) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({
+        console.log('handleSubmit - before dispatch', columnId, title);        dispatch({
             type: 'ADD_CARD',
             payload: {
                 columnId,
@@ -21,6 +21,7 @@ const CardForm = ({ columnId }) => {
                 }
             }
         });
+        console.log('handleSubmit - after dispatch');
         setTitle('');
     };
 
