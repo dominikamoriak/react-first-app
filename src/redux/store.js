@@ -29,14 +29,14 @@ const reducer = (state, action) => {
         { ...action.payload, id: shortid() }]};
 
         case 'ADD_CARD':
-      const { columnId, card } = action.payload;
-      const newColumns = state.columns.map(column => {
-        if (column.id === columnId) {
-          return { ...column, cards: [...column.cards, { ...card, id: shortid() }] };
-        }
-        return column;
-      });
-      return { ...state, columns: newColumns };
+          const { columnId, card } = action.payload;
+          const newColumns = state.columns.map(column => {
+            if (column.id === columnId) {
+              return { ...column, cards: [...(column.cards || []), { ...card, id: shortid() }] };
+            }
+            return column;
+          });
+          return { ...state, columns: newColumns };        
 
       case 'UPDATE_SEARCHSTRING':
         return { ...state, searchString: action.payload };
