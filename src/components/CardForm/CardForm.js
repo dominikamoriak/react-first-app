@@ -15,9 +15,9 @@ const CardForm = ({ columnId }) => {
         console.log('handleSubmit - before dispatch', columnId, title);        dispatch({
             type: 'ADD_CARD',
             payload: {
-                columnId,
                 card: {
-                    title
+                    title,
+                    columnId
                 }
             }
         });
