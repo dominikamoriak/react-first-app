@@ -5,7 +5,7 @@ import strContains from '../utils/strContains.js';
 
 //selectors
 export const getFilteredCards = ({ cards, searchString }, columnId) => cards
-  .filter(card => card.columnId === columnId && strContains(card.title, searchString));
+  .filter(card => card.columnId === columnId && searchString && strContains(card.title, searchString));
 
 export const getAllColumns = (state) => state.columns;
 
