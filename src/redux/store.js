@@ -21,7 +21,7 @@ export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const updateSearchString = searchString => ({ type: 'UPDATE_SEARCHSTRING', payload: searchString });
 
 
-const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
     switch(action.type) {
 
       case 'ADD_COLUMN':
@@ -29,15 +29,9 @@ const reducer = (state, action) => {
         { ...action.payload, id: shortid() }]};
 
         case 'ADD_CARD':
-          console.log('ADD_CARD', action.payload);
-          const { columnId, card } = action.payload;
-          const newColumns = state.columns.map(column => {
-            if (column.id === columnId) {
-              return { ...column, cards: [...(column.cards || []), { ...card, id: shortid() }] };
-            }
-            return column;
-          });
-          return { ...state, columns: newColumns };        
+          return {...state,
+            cards: [...state.cards, action.payload.card]
+          };
 
       case 'UPDATE_SEARCHSTRING':
         return { ...state, searchString: action.payload };

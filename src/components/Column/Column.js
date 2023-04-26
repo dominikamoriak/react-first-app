@@ -14,10 +14,11 @@ const Column = props => {
         <h2 className={styles.title}>{title}</h2>
 
         <ul className={styles.cards}>
-	        {cards.map(card => <Card key={card.id} title={card.title} />)}
+	        {cards.map(card => (<Card key={card.id} title={card.title} />))}
         </ul>
             <CardForm columnId={id} 
-            action={newCard => props.action(newCard, id)} />
+            action={newCard => props.action({columnId: id, card: {title: newCard,},
+            })} />
     </article>);
 };
 
