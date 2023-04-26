@@ -10,11 +10,7 @@ export const getFilteredCards = ({ cards, searchString }, columnId) => cards
 export const getAllColumns = (state) => state.columns;
 
 export const getCardsByColumnId = (state, columnId) => {
-  const column = state.columns.find(col => col.id === columnId);
-  if (column) {
-    return column.cards;
-  }
-  return [];
+  return state.cards.filter(col => col.columnId === columnId);
 };
 
 export const getSearchString = (state) => state.searchString;
