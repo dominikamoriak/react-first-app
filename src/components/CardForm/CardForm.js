@@ -2,11 +2,13 @@ import styles from './CardForm.module.scss';
 import { useState } from 'react';
 import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCardsByColumnId } from '../../redux/store';
 
-const CardForm = columnId => {
+const CardForm = ({ columnId }) => {
     const [title, setTitle] = useState('');
     const dispatch = useDispatch();
+    const cards = useSelector(state => getCardsByColumnId(state, columnId));
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -26,6 +28,9 @@ const CardForm = columnId => {
         <form className={styles.cardForm} onSubmit={handleSubmit}>
             <TextInput value={title} onChange={e => setTitle(e.target.value)} />
             <Button>Add card</Button>
+            <div className={styles.cardCount}>
+                {cards.length} cards
+            </div>
         </form>
 	);
 };
