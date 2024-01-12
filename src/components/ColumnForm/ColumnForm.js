@@ -24,7 +24,7 @@ const ColumnForm = props => {
             <TextInput value={title} onChange={e => setTitle(e.target.value)} />
         <span className={styles.span}>Icon:</span>
             <TextInput value={icon} onChange={e => setIcon(e.target.value)} />
-            <span className={styles.button}><Button>Add column</Button></span>
+            <Button>Add column</Button>
         </form>
 	);
 };

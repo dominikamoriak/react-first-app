@@ -5,32 +5,33 @@
     text-align: center;
 }
 
-.input {
-    margin: 0 5px 0 5px ;
+.span {
+    margin: 0 10px 0 10px;
 }
 
 @media (max-width: 767px) {
     .columnForm {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      position:absolute;
-
-    }
-    .input {
-        margin: 0 3px 5px 3px;
-        padding-right: 35px;
-    }
-
-    .span {
-        position: relative;
-        padding: 0 0 0 80px;
-    }
-
-    .button {
-     padding: 5px 10px 0 45px;
-     width: 50%;
+        padding: 0 50px 0 20px;
     }
   }
+  @media (min-width: 390px) and (max-width: 932px) {
+    .columnForm {
+        padding: 0 50px 0 60px;
+    }
+  }
+  @media (min-width: 430px) and (max-width: 932px) {
+    .columnForm {
+        padding: 0 50px 0 75px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .columnForm {
+        padding: 10px;
+        text-align: center;
+    }
+}
+@media (min-width: 540px) and (max-width: 720px) {
+    .columnForm {
+        padding: 0 200px 0 60px;
+    }
+}
