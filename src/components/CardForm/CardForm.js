@@ -12,7 +12,8 @@ const CardForm = ({ columnId }) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log('handleSubmit - before dispatch', columnId, title);        dispatch({
+        console.log('handleSubmit - before dispatch', columnId, title);        
+        dispatch({
             type: 'ADD_CARD',
             payload: {
                 card: {
