@@ -7,8 +7,19 @@ const NavBar = () => {
             <Container>
                 <div className={styles.navHeader}>
                     <a href="/" className={styles.link}>
-                    
+                        <span className="fa fa-tasks" />
                     </a>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/">Favourite</a>
+                        </li>
+                        <li>
+                            <a href="/">About</a>
+                        </li>
+                    </ul>
                 </div>
             </Container>
         </nav>

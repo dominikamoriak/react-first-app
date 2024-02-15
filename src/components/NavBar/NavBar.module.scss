@@ -1,1 +1,27 @@
 @import '../../styles/settings.scss';
+
+.nav {
+    background-color: darken($color-dark, 3%);
+}
+
+.navHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navHeader a {
+    color: $color-light;
+    font-weight: bold;
+}
+
+.navHeader ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 12px 7px;
+    font-size: 17px;
+}
+
+.link {
+    font-size: 24px;
+    padding: 24px 7px;
+}
