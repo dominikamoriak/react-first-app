@@ -9,12 +9,6 @@
     justify-content: space-between;
 }
 
-.navHeader a {
-    color: $color-light;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 .navHeader ul li {
     list-style-type: none;
     display: inline-block;
@@ -25,4 +19,15 @@
 .link {
     font-size: 24px;
     padding: 24px 7px;
+    color: $color-light;
+}
+
+.linkActive {
+    color: $color-warning;
+}
+
+.linkNoActive {
+    color: $color-light;
+    font-weight: bold;
+    text-decoration: none;
 }
