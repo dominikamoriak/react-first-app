@@ -15,6 +15,9 @@ export const getCardsByColumnId = (state, columnId) => {
   return state.cards.filter(col => col.columnId === columnId);
 };
 
+export const getListById = ({ lists }, listId ) =>
+  lists.find(list => list.id === listId);
+
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 
