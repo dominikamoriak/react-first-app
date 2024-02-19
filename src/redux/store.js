@@ -23,6 +23,10 @@ export const getColumnsByList = ({ columns }, listId) =>
 
 export const getAllLists = (state) => state.lists;
 
+export const getColumnsByListId = (state, listId) => {
+  return state.columns.filter(list => list.listId === listId);
+};
+
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 
