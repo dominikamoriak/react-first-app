@@ -36,6 +36,8 @@ export const getCardById = (state, cardId) =>
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 
+export const addCard = payload => ({ type: 'ADD_CARD', payload });
+
 export const updateSearchString = searchString => ({ type: 'UPDATE_SEARCHSTRING', payload: searchString });
 
 export const addList = payload => ({ type: 'ADD_LIST', payload});
