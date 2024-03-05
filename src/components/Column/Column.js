@@ -2,7 +2,8 @@ import styles from './Column.module.scss';
 import Card from '../Card/Card';
 import CardForm from '../CardForm/CardForm';
 import { useSelector } from 'react-redux';
-import { getFilteredCards, getSearchString } from '../../redux/store';
+import { getFilteredCards } from '../../redux/store';
+import { getSearchString } from '../../redux/searchStringRedux';
 
 const Column = props => {
     const { id, title, icon } = props;
