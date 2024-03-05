@@ -26,3 +26,14 @@
 .notFavorite {
     color: $color-dark;
 }
+
+.buttonRemove {
+    color: $color-dark;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.buttonFavorite, .buttonRemove {
+    margin-left: -3px;
+}
