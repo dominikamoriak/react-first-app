@@ -18,13 +18,8 @@ export const getCardsByColumnId = (state, columnId) => {
   return state.cards.filter(col => col.columnId === columnId);
 };
 
-export const getListById = ({ lists }, listId ) =>
-  lists.find(list => list.id === listId);
-
 export const getColumnsByList = ({ columns }, listId) => 
   columns.filter(column => column.listId === listId);
-
-export const getAllLists = (state) => state.lists;
 
 export const getColumnsByListId = (state, listId) => {
   return state.columns.filter(column => column.listId === listId);
@@ -42,8 +37,6 @@ export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
 
 export const updateSearchString = searchString => ({ type: 'UPDATE_SEARCHSTRING', payload: searchString });
-
-export const addList = payload => ({ type: 'ADD_LIST', payload});
 
 export const toggleCardFavorite = cardId => ({ type: 'TOGGLE_CARD_FAVORITE', payload: cardId });
 
