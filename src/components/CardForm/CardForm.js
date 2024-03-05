@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCardsByColumnId, addCard } from '../../redux/store';
+import { getCardsByColumnId, addCard } from '../../redux/cardsRedux';
 
 const CardForm = ({ columnId }) => {
     const [title, setTitle] = useState('');

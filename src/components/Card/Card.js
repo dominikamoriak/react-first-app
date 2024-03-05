@@ -1,7 +1,7 @@
 import styles from './Card.module.scss';
 import clsx from 'clsx';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleCardFavorite, getCardById } from '../../redux/store';
+import { toggleCardFavorite, getCardById } from '../../redux/cardsRedux';
 
 const Card = ({ cardId }) => {
     const card = useSelector(state => getCardById(state, cardId));
